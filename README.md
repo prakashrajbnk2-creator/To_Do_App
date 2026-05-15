@@ -95,7 +95,7 @@ We use a **Master Gate** pattern for data integrity. Users can *only* access res
 
 ## 🤝 Contribution
 
-Designed by **AI Studio Build**. Feel free to fork and initialize your own cognitive nodes.
+Designed by **Prakashraj**. Feel free to give advise thankyou
 
 ---
 
