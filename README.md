@@ -142,5 +142,5 @@ TASK.IQ/
 ## 📄 License
 Licensed under the **MIT License**.
 
-Built by **AI Studio Build** · *Expanding your productivity, one task at a time.*
+Built by **Prakashraj** · *Expanding your productivity, one task at a time.*
 
