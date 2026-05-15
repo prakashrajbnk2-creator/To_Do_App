@@ -1,0 +1,39 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Default deny
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Helper functions
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    function isValidTodo(data) {
+      return data.text is string && data.text.size() <= 1000 &&
+             data.completed is bool &&
+             data.userId is string &&
+             data.userId == request.auth.uid &&
+             data.createdAt != null;
+    }
+
+    match /todos/{todoId} {
+      // Users can only read their own todos
+      allow list: if isSignedIn() && resource.data.userId == request.auth.uid;
+      allow get: if isSignedIn() && resource.data.userId == request.auth.uid;
+      
+      // Users can only create todos for themselves
+      allow create: if isSignedIn() && isValidTodo(request.resource.data);
+      
+      // Users can only update/delete their own todos
+      allow update: if isSignedIn() && resource.data.userId == request.auth.uid && isValidTodo(request.resource.data);
+      allow delete: if isSignedIn() && resource.data.userId == request.auth.uid;
+    }
+  }
+}

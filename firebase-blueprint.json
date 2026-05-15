@@ -1,0 +1,32 @@
+{
+  "entities": {
+    "todo": {
+      "title": "Todo Task",
+      "description": "A task item created by a user",
+      "type": "object",
+      "properties": {
+        "text": { "type": "string" },
+        "completed": { "type": "boolean" },
+        "category": { "type": "string" },
+        "userId": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "subTasks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "text": { "type": "string" }
+            }
+          }
+        }
+      },
+      "required": ["text", "completed", "userId", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/todos/{todoId}": {
+      "schema": "todo",
+      "description": "Collection of tasks for all users"
+    }
+  }
+}
