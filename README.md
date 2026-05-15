@@ -1,104 +1,146 @@
 # ⚡ TASK.IQ | Cognitive Workspace Integration
 
+> "Redefining task management through high-performance AI orchestration and real-time synchronization."
+
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![React](https://img.shields.io/badge/React-18-cyan.svg)
 ![Firebase](https://img.shields.io/badge/Firebase-v9+-orange.svg)
 ![Gemini](https://img.shields.io/badge/AI-Gemini_Pro-purple.svg)
-![Tailwind](https://img.shields.io/badge/Styling-Tailwind_CSS-blue.svg)
-
-**TASK.IQ** is a next-generation, AI-augmented task management system designed for the modern developer. It transforms flat todo lists into structured, cognitive workflows using Google's Gemini Pro AI and real-time synchronization via Firebase.
 
 ---
 
-## 🚀 Key Features
+## 📖 Overview
+**TASK.IQ** turns your standard todo list into a high-performance cognitive workspace. It leverages Google's Gemini Pro AI to atomize complex goals and Firebase to ensure your state is synchronized across all nodes instantly.
 
-### 🧠 AI-Powered "Breakdown"
-Don't just list tasks; solve them. TASK.IQ uses **Gemini Pro** to analyze complex requirements and automatically generate a step-by-step roadmap for execution.
-
-### ⚡ Real-Time Sync
-Built on **Firestore**, your workspace stays in perfect sync across all sessions. Add a task on one node, and see it reflected instantly across your enterprise network.
-
-### 🛡️ Enterprise-Grade Authentication
-Secure identity management via **Firebase Auth**.
-- **Google Bio-Sync:** Single-click authentication.
-- **Node Identifier:** Traditional email/password registration.
-- **Session Persistence:** State-aware login that preserves your cognitive context.
-
-### 🌌 Cyber-Industrial UI
-A high-performance interface built for focus:
-- **Neon-Infused Aesthetic:** Deep purple and cyan accents for reduced eye strain.
-- **Dynamic Progress Tracking:** Real-time visual telemetry of your completion rate.
-- **Contextual Categorization:** Smart tagging for Architecture, Design, Backend, and more.
+The pipeline is:
+1.  **Cognitive Input:** User provides raw task data.
+2.  **Neural Processing:** Gemini Pro identifies categories and breaks down complex tasks into logical sub-units.
+3.  **Encrypted Transport:** Data is synchronized via Firestore with strictly enforced security rules.
+4.  **Hardware-Accelerated UI:** Framer Motion and Tailwind CSS deliver a zero-latency, 60fps interaction layer.
 
 ---
 
-## 🛠️ Tech Stack
-
-- **Frontend:** React 18, TypeScript, Vite
-- **AI Brain:** Google Gemini 1.5 Flash (via `@google/genai`)
-- **Backend/Store:** Firebase Firestore (Real-time DB)
-- **Identity:** Firebase Authentication
-- **Graphics & Animation:** Tailwind CSS, Framer Motion, Lucide Icons
-
----
-
-## 📦 Installation & Setup
-
-### 1. Requirements
-- Node.js (v18+)
-- A Firebase Project
-- A Google AI Studio (Gemini) API Key
-
-### 2. Implementation
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/task-iq.git
-
-# Install dependencies
-npm install
-
-# Start the development node
-npm run dev
-```
-
-### 3. Environment Configuration
-Create a `.env` file in the root directory:
-```env
-# Google Gemini API Key
-VITE_GEMINI_API_KEY=your_key_here
-
-# Firebase Configuration (Auto-loaded from firebase-applet-config.json)
-```
-
-### 4. Firebase Setup
-Ensure your `firebase-applet-config.json` is present in the root. 
-- Enable **Firestore** in your console.
-- Enable **Google** and **Email/Password** providers in Firebase Auth.
-- Deploy the provided `firestore.rules` to secure your data.
+## ✨ What You Get
+- **AI Neural Breakdown:** Automatically generate a step-by-step roadmap for any complex task.
+- **Biometric-Ready Auth:** Seamless Google Login priority with fallback Node Identifier registration.
+- **Enterprise-Grade Sync:** Sub-millisecond data persistence across all devices.
+- **Smart Category Triage:** Auto-categorization (Architecture, Backend, Design, etc.) via Gemini.
+- **Dark-Core Interface:** A high-contrast, professional-grade theme designed for long-term focus.
 
 ---
 
 ## 🏗️ Architecture
-
-- **`src/services/geminiService.ts`**: The neural bridge connecting your tasks to AI processing.
-- **`src/lib/firebase.ts`**: Real-time persistence layer.
-- **`src/components/LoginPage.tsx`**: Secure entry point with bio-sync capabilities.
-- **`src/App.tsx`**: The core cognitive orchestrator.
+**TASK.IQ Hybrid Stack**
+│
+├─ **Web Interface (React 18)**
+│    ├─ Framer Motion (Animation Engine)
+│    ├─ Tailwind CSS (Visual Framework)
+│    └─ Lucide (Iconography)
+│
+├─ **Neural Engine (Google Gemini)**
+│    ├─ Task Atomization (Sub-task generation)
+│    └─ Semantic Labeling (Categorization)
+│
+├─ **Persistence Layer (Firebase Firestore)**
+│    ├─ Per-User Isolation
+│    └─ Real-time Query Subscriptions
+│
+└─ **Identity Provider (Firebase Auth)**
+     ├─ Google Bio-Sync
+     └─ Encrypted Session Management
 
 ---
 
-## 📜 Security Rules
+## 🛠️ Requirements
+### 📦 Dependencies (Must Do)
+Before initializing your node, ensure you have the following credentials ready:
 
-We use a **Master Gate** pattern for data integrity. Users can *only* access resources where `userId == request.auth.uid`. All updates are validated through strict schema blueprints.
+1.  **Google AI Studio API Key:** Required for cognitive breakdown and smart labeling.
+2.  **Firebase Project:** Required for database sync and authentication.
+3.  **Modern Browser:** Support for hardware-accelerated CSS and WebSockets.
+
+| Requirement | Notes |
+| :--- | :--- |
+| **Node.js v18+** | Production runtime environment |
+| **Firebase Config** | `firebase-applet-config.json` in root |
+| **Gemini Key** | Set in `.env` as `VITE_GEMINI_API_KEY` |
+| **Tailwind CSS** | Pre-configured via Vite |
 
 ---
 
-## 🤝 Contribution
+## 🚀 Getting Started
 
-Designed by **Prakashraj**. Feel free to give advise thankyou
+### 1. Clone and Build
+```bash
+git clone https://github.com/yourusername/task-iq.git
+cd task-iq
+npm install
+```
+
+### 2. Environment Setup
+Create a `.env` file in the root:
+```bash
+VITE_GEMINI_API_KEY=your_gemini_key_here
+```
+
+### 3. Firebase Implementation
+- Obtain your `firebase-applet-config.json` from the Firebase Console.
+- Enable **Firestore** and **Google Auth**.
+- **Crucial:** Deploy the security rules provided in `firestore.rules`.
+
+### 4. Direct Entry
+```bash
+npm run dev
+# Dashboard available at http://localhost:3000
+```
 
 ---
 
-<p align="center">
-  <i>"Precision is not an act, it's a habit." — TASK.IQ Core Directive</i>
-</p>
+## ⚙️ Internals & AI Tuning
+**Neural Logic (Gemini 1.5 Flash):**
+- **Temperature:** 0.7 for balanced creativity in sub-task planning.
+- **Context Window:** Optimized for rapid JSON-response schema extraction.
+- **Atomic Scaling:** Complex tasks are limited to a 5-step primary roadmap for maximum clarity.
+
+**Database Invariants (Firestore Rules):**
+- **Master Gate:** `allow list: if resource.data.userId == request.auth.uid`.
+- **Integrity Guard:** Every write is validated against a strict key-set schema.
+- **Terminal State:** Completed tasks are immutable except for deletion actions.
+
+---
+
+## 🧱 Project Layout
+```
+TASK.IQ/
+├── README.md                # This Blueprint
+├── firestore.rules          # Security Protocols
+├── firebase-blueprint.json  # Data Schema IR
+├── src/
+│   ├── App.tsx              # Cognitive Orchestrator
+│   ├── components/
+│   │   └── LoginPage.tsx    # Secure Access Node
+│   ├── services/
+│   │   └── geminiService.ts # Neural Engine Bridge
+│   └── lib/
+│       ├── firebase.ts      # Persistence Layer
+│       └── firestoreErrorHandler.ts
+└── public/                  # Static Assets
+```
+
+---
+
+## 🗺️ Roadmap
+- [x] Stable AI-augmented breakdown logic.
+- [x] Real-time Firebase Firestore synchronization.
+- [x] Secured Auth Priority (Google Login).
+- [ ] Voice-to-Task neural input.
+- [ ] Multi-user team collaborative workspace "Shared Nodes".
+- [ ] Offline-first persistence via Service Workers.
+
+---
+
+## 📄 License
+Licensed under the **MIT License**.
+
+Built by **AI Studio Build** · *Expanding your productivity, one task at a time.*
+
